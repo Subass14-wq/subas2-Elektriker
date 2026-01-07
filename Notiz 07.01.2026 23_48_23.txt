@@ -1,0 +1,81 @@
+
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subas Elektriker</title>
+<style>
+body{margin:0;font-family:Arial;background:#0b1220;color:white}
+header{background:#111c3a;padding:20px;text-align:center}
+h1{color:#f5c542;margin:0}
+section{padding:30px}
+.card{background:#1a2755;padding:20px;border-radius:12px;margin-bottom:20px}
+.btn{display:inline-block;background:#f5c542;color:black;padding:12px 20px;border-radius:20px;text-decoration:none;font-weight:bold}
+input,textarea{width:100%;padding:10px;margin-top:10px;border-radius:10px;border:none}
+button{width:100%;padding:12px;background:#f5c542;border:none;border-radius:20px;font-weight:bold}
+footer{text-align:center;color:#aaa;padding:20px}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>⚡ Subas Elektriker</h1>
+<p>Elektroarbeiten · Reparaturen · Störungen</p>
+</header>
+
+<section class="card">
+<h2>Willkommen</h2>
+<p>
+Ich biete professionelle Elektroarbeiten für Privat und Gewerbe.
+Zuverlässig, sauber und fair.
+</p>
+<a class="btn" href="#kontakt">Kontakt</a>
+</section>
+
+<section class="card">
+<h2>Leistungen</h2>
+<ul>
+<li>🏠 Haus & Wohnung Installation</li>
+<li>💡 Beleuchtung & LED</li>
+<li>🔌 Geräte & Anschlüsse</li>
+<li>🛠️ Störungen & Reparaturen</li>
+<li>📶 Smart Home</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Über mich</h2>
+<p>
+Mein Name ist Subas.  
+Ich arbeite zuverlässig und sauber – Kundenzufriedenheit steht an erster Stelle.
+</p>
+</section>
+
+<section class="card" id="kontakt">
+<h2>Kontakt</h2>
+<p>📧 E-Mail: <b>subass14@hotmail.com</b></p>
+
+<form onsubmit="sendMail(event)">
+<input id="name" placeholder="Name" required>
+<textarea id="msg" placeholder="Nachricht" required></textarea>
+<button type="submit">Nachricht senden</button>
+</form>
+</section>
+
+<footer>
+© 2026 Subas Elektriker
+</footer>
+
+<script>
+function sendMail(e){
+e.preventDefault();
+const n=document.getElementById("name").value;
+const m=document.getElementById("msg").value;
+window.location.href="mailto:subass14@hotmail.com?subject=Elektriker Anfrage von "+encodeURIComponent(n)+"&body="+encodeURIComponent(m);
+}
+</script>
+
+</body>
+</html>
